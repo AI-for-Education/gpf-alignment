@@ -3,6 +3,7 @@ from pathlib import Path
 import zipfile
 import os
 import tempfile
+import shutil
 from lxml import etree
 from PIL import Image
 from openpyxl import load_workbook
@@ -173,6 +174,7 @@ def load_excel_with_richval_images(excel_path, header_row=1):
                     if df_row >= 0:
                         # Load the image using Pillow
                         image = Image.open(rid_to_image[rid])
+                        image.load()
 
                         # Store the Pillow image object in the mapping
                         image_mapping[(df_row, col_idx)] = image

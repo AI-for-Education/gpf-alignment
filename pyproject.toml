@@ -10,9 +10,18 @@ authors = [ {name = "Fab Inc."} ]
 readme = "README.md"
 requires-python = "~=3.12"
 dependencies = [
-    "pydantic",
-    "pandas",
-    "lxml",
-    "openpyxl",
-    "pillow"
+    "gpf",
+    #"gpf @ git+https://github.com/AI-for-Education/global-proficiency-framework.git",
+    "fabdata-llm @ git+https://github.com/AI-for-Education/fabdata-llm.git@v0.22.4",
+    "lxml == 5.3.*",
+    "openpyxl == 3.1.*",
+    "pillow == 11.0.*",
+    "plotly == 5.24.*",
+    "plotnine == 0.13.*",
+    "numpy == 1.26.*",
+    "scikit-learn == 1.5.*",
+    "seaborn == 0.13.*",
+    "tabula-py==2.*",
+    "pymupdf==1.24.*",
+    "fuzzywuzzy[speedup] == 0.18.* "
 ]

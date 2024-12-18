@@ -5,12 +5,11 @@ from pathlib import Path
 from collections import defaultdict
 
 from . import PROJECT_ROOT
-
 TABLEPATH = PROJECT_ROOT / "grade-level/grade-specs/appendix_b_tables"
 MBSSE_DIR = PROJECT_ROOT / "data/mbsse"
 MBSSE_JSON = MBSSE_DIR / "mbsseKP_files_lessonplans_parsed_cleaned.json"
 
-
+# %%
 def load_mbsse_extras():
     # load extras for GPF grades: primary 1-6, JSS 1-3
     with open(MBSSE_JSON, "r") as f:
@@ -42,9 +41,9 @@ def load_mbsse_extras():
                         file_meta["level"] = level
                         file_meta["subject"] = subject
 
-                        if level == "primary":
+                        if level=="primary":
                             file_meta["gpf_grade"] = file_meta["year"]
-                        elif level == "jss":
+                        elif level=="jss":
                             file_meta["gpf_grade"] = file_meta["year"] + 6
 
                         extras.append(
@@ -60,12 +59,12 @@ def load_mbsse_extras():
                         )
 
     # add an arbitrary ID number based on load order
-    for i, x in enumerate(extras):
-        x["id"] = i
+    for i,x in enumerate(extras):
+        x['id'] = i
     return extras
 
 
-# %%
+#%%
 # investigate all extras (loaded all not excluding SSS)
 # 4019 extras items
 # 1465 unique "Headings"
@@ -83,3 +82,4 @@ def load_mbsse_extras():
 # print(set(x["class_level"] for x in extras if x["level"]=="sss" and "part" in
 # x)) print(set(x["part"] for x in extras if x["level"]=="sss" and "part" in x))
 # {1, 2}
+

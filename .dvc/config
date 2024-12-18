@@ -4,3 +4,4 @@
 ['remote "azure"']
     url = azure://gpf-alignment
     account_name = fabdvcgpfpublic
+    allow_anonymous_login = true
