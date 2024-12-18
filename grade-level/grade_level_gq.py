@@ -20,7 +20,7 @@ register_models(HERE.parent / "custom_models.yaml")
 TABLEPATH = HERE / "grade-specs/appendix_b_tables"
 DATADIR = HERE.parent / "data/stimuli"
 sys.path.append(str(HERE.parent / "GPF-Reading"))
-from GPF.item_generation import DataLoader, Item, Question
+from gpf.item_generation import DataLoader, Item, Question
 
 # %%
 # load interpolated appendix b grade description tables

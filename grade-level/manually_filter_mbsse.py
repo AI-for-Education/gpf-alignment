@@ -1,6 +1,6 @@
 # %%
 import json
-from mbsse import load_mbsse_extras, MBSSE_DIR
+from gpf_alignment.mbsse import load_mbsse_extras, MBSSE_DIR
 
 extras = load_mbsse_extras()
 

@@ -4,7 +4,7 @@ from collections import defaultdict
 from pathlib import Path
 
 import pandas as pd
-from mbsse import MBSSE_DIR, load_mbsse_extras
+from gpf_alignment.mbsse import MBSSE_DIR, load_mbsse_extras
 import subprocess
 
 HERE = Path(__file__).resolve().parent

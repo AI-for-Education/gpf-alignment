@@ -1,6 +1,5 @@
 #%%
 from pathlib import Path
-import pdfplumber
 import pandas as pd
 import numpy as np
 from pydantic import BaseModel
