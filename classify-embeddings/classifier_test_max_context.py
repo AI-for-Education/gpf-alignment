@@ -11,11 +11,7 @@ import pandas as pd
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import f1_score, accuracy_score, precision_score, recall_score
 
-from gpf.item_generation import (
-    get_unique_skills,
-    get_all_items_flat,
-    get_all_items_nfer_flat,
-)
+from gpf.item_generation import get_unique_skills, get_all_items_flat
 from gpf_alignment.classify import (
     gen_target_X,
     gen_Xy,
@@ -25,13 +21,12 @@ from gpf_alignment.classify import (
     get_gpf_contexts,
 )
 
-HERE = Path(__file__).resolve().parent
-training_data_path = HERE / "training_data"
-example_data_path = training_data_path / "example_data"
+from gpf_alignment.dataloader import get_all_items_nfer_flat
+from gpf_alignment import DATADIR
+
+training_data_path = DATADIR / "training_data"
 
 ###########################################
-
-
 # %%
 # load GPF and NFER items
 

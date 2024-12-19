@@ -10,8 +10,8 @@ authors = [ {name = "Fab Inc."} ]
 readme = "README.md"
 requires-python = "~=3.12"
 dependencies = [
-    "gpf",
-    #"gpf @ git+https://github.com/AI-for-Education/global-proficiency-framework.git",
+    # "gpf",
+    # "gpf @ git+https://github.com/AI-for-Education/global-proficiency-framework.git",
     "fabdata-llm @ git+https://github.com/AI-for-Education/fabdata-llm.git@v0.22.4",
     "lxml == 5.3.*",
     "openpyxl == 3.1.*",

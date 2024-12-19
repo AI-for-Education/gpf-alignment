@@ -1,0 +1,12 @@
+name: gpf-alignment
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - conda-forge::dvc
+  - conda-forge::dvc-azure
+  - pip:
+    - -r requirements.txt
+    - ipykernel
+    - black
